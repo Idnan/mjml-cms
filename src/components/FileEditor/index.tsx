@@ -102,7 +102,7 @@ function FileEditor() {
 
     return (
         <>
-            <Flex flexDirection={ 'row' } marginX={ 3 } alignItems={ 'center' }>
+            <Flex flexDirection={ 'row' } marginX={ 3 } marginY={3} alignItems={ 'center' }>
                 <Text
                     display={ 'flex' }
                     flex={ 1 }
