@@ -28,7 +28,6 @@ import { codeMirrorCtrlD, codeMirrorDuplicate } from './helpers/codemirror-short
 import { completeAfter, completeIfAfterLt, completeIfInTag } from './helpers/codemirror-autocomplete-mjml';
 
 function FileEditor() {
-
     let _codeMirror: EditorFromTextArea | any = undefined;
     let _textarea: any = useRef();
 
@@ -83,7 +82,7 @@ function FileEditor() {
                 'Shift-Ctrl-D': (cm: Editor) => handleCtrlShiftD(cm),
                 'Shift-Cmd-D': (cm: Editor) => handleCtrlShiftD(cm)
                 /* eslint-enable quotes */
-            },
+            }
         });
     };
 
@@ -102,12 +101,17 @@ function FileEditor() {
     };
 
     return (
-        <Box className={ 'FileEditor' }>
+        <>
             <Button onClick={ () => {
+                if (!_codeMirror) {
+                    return;
+                }
                 _codeMirror.setValue(beautify(_codeMirror.getValue()));
             } }>Beautify</Button>
-            <textarea ref={ r => (_textarea = r) } />
-        </Box>
+            <Box className={ 'FileEditor' }>
+                <textarea ref={ r => (_textarea = r) } />
+            </Box>
+        </>
     );
 }
 

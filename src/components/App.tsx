@@ -1,6 +1,6 @@
 import '../assets/css/App.css';
 import React from 'react';
-import { Flex, Heading, List, ListItem, Stack, Text } from '@chakra-ui/core/dist';
+import { Flex, Heading, List, ListItem, Stack } from '@chakra-ui/core/dist';
 import FileEditor from './FileEditor';
 
 function App() {

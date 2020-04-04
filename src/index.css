@@ -7,4 +7,5 @@ body {
     background-color: #252426;
     color: #afafaf;
     line-height: 1.42857143;
+    overscroll-behavior-y: none;
 }
