@@ -1,18 +1,18 @@
-import '../assets/css/App.css';
+import './index.css';
 import React from 'react';
+import FileEditor from '../FileEditor';
 import { Flex, Heading, List, ListItem, Stack } from '@chakra-ui/core/dist';
-import FileEditor from './FileEditor';
 
 function App() {
     return (
         <Flex flexDirection={ 'row' } flex={ 1 }>
             <Flex flexDirection={ 'column' }>
-                <Stack display={ 'block' }>
-                    <Heading as='h6' size='xs' padding={ 0 }>Templates</Heading>
+                <Stack display={ 'block' } paddingLeft={ 5 } paddingRight={ 10 } paddingY={ 0 }>
+                    <Heading as='h6' size='xs' marginTop={ 5 } textTransform={ 'uppercase' }>Templates</Heading>
                     <hr />
-                    <List styleType='none' padding={ 0 }>
-                        <ListItem>buyer-account-verified</ListItem>
-                        <ListItem>seller-account-verified</ListItem>
+                    <List styleType='decimal' padding={ 0 } lineHeight={ 1.6 }>
+                        <ListItem className={'list-item'}>buyer-account-verified</ListItem>
+                        <ListItem className={'list-item'}>seller-account-verified</ListItem>
                     </List>
                 </Stack>
             </Flex>
