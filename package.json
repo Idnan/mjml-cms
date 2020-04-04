@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/core": "^0.7.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "codemirror": "^5.52.2",
+    "emotion-theming": "^10.0.27",
+    "js-beautify": "^1.10.3",
+    "lodash": "^4.17.15",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
@@ -15,7 +22,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2"
+    "@testing-library/user-event": "^7.1.2",
+    "@types/codemirror": "^0.0.90",
+    "@types/js-beautify": "^1.8.2",
+    "@types/lodash": "^4.14.149",
+    "@types/testing-library__jest-dom": "^5.0.3",
+    "@types/testing-library__react": "^10.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

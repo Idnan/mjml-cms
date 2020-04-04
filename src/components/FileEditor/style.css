@@ -1,0 +1,61 @@
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/neo.css';
+@import '~codemirror/addon/hint/show-hint.css';
+@import '~codemirror/addon/lint/lint.css';
+
+.FileEditor {
+    flex-grow: 1;
+    position: relative;
+}
+
+.FileEditor .CodeMirror {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+}
+
+.FileEditor .CodeMirror .CodeMirror-scroll {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.cm-s-one-dark .CodeMirror-matchingbracket,
+.cm-s-one-dark .CodeMirror-matchingtag {
+    color: #ef8a92 !important;
+    border-bottom-color: rgba(52, 112, 223, 0.1) !important;
+}
+
+.CodeMirror-hints {
+    border: none;
+    background: #2a2a35;
+}
+
+.CodeMirror-hint {
+    color: #bbb;
+    padding: 5px;
+}
+
+li.CodeMirror-hint-active {
+    background-color: rgba(52, 112, 223, 0.1) !important;
+    color: #3470df;
+}
+
+.FileEditor--loader {
+    background: #2a2a35;
+}
+
+.CodeMirror-lint-tooltip {
+    background: #32323b;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 18px;
+    color: white;
+    padding: 10px;
+}
+
+.CodeMirror-lint-message-error {
+    background-image: none;
+    padding-left: 0;
+}
