@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "axios": "^0.19.2",
     "codemirror": "^5.52.2",
     "emotion-theming": "^10.0.27",
     "js-beautify": "^1.10.3",
