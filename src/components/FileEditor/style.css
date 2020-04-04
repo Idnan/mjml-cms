@@ -3,6 +3,18 @@
 @import '~codemirror/addon/hint/show-hint.css';
 @import '~codemirror/addon/lint/lint.css';
 
+.editorBtn {
+    cursor: pointer;
+    box-shadow: none !important;
+    color: #ffffff !important;
+}
+
+.editorBtn:hover {
+    background: transparent !important;
+    border-color: #3470df !important;
+    color: #3470df !important;
+}
+
 .FileEditor {
     flex-grow: 1;
     position: relative;

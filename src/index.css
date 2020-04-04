@@ -6,5 +6,5 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #252426;
     color: #afafaf;
-    overscroll-behavior-y: none;
+    overscroll-behavior: none;
 }

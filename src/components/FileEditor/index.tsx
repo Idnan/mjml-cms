@@ -4,7 +4,7 @@ import './style.css';
 import '../../assets/css/one-dark.css';
 
 import beautifyJS from 'js-beautify';
-import { Box, Button } from '@chakra-ui/core/dist';
+import { Box, Button, ButtonGroup, Flex, Text } from '@chakra-ui/core/dist';
 
 import CodeMirror, { Editor, EditorFromTextArea } from 'codemirror';
 import 'codemirror/addon/selection/active-line';
@@ -102,12 +102,41 @@ function FileEditor() {
 
     return (
         <>
-            <Button onClick={ () => {
-                if (!_codeMirror) {
-                    return;
-                }
-                _codeMirror.setValue(beautify(_codeMirror.getValue()));
-            } }>Beautify</Button>
+            <Flex flexDirection={ 'row' } marginX={ 3 } alignItems={ 'center' }>
+                <Text
+                    display={ 'flex' }
+                    flex={ 1 }
+                    justifyContent={ 'flex-start' }
+                    color={ '#fff' }>
+                    MJML Editor
+                </Text>
+                <ButtonGroup
+                    spacing={ 2 }
+                    flex={ 1 }
+                    display={ 'flex' }
+                    justifyContent={ 'flex-end' }>
+                    <Button
+                        className={'editorBtn'}
+                        size='xs'
+                        variant='outline'
+                        variantColor='teal'
+                        onClick={ () => {
+                            if (!_codeMirror) {
+                                return;
+                            }
+                            _codeMirror.setValue(beautify(_codeMirror.getValue()));
+                        } }>
+                        Beautify MJML
+                    </Button>
+                    <Button
+                        className={'editorBtn'}
+                        size='xs'
+                        variant='outline'
+                        variantColor='teal'>
+                        Preview
+                    </Button>
+                </ButtonGroup>
+            </Flex>
             <Box className={ 'FileEditor' }>
                 <textarea ref={ r => (_textarea = r) } />
             </Box>
