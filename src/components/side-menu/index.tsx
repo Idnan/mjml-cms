@@ -11,8 +11,14 @@ function SideMenu(props: any) {
     }, []);
 
     return (
-        <Stack display={ 'block' } width='220px'>
-            <Heading mb='0' py={ 4 } bg='teal.900' px={ 3 } as='h6' fontSize='xs' textTransform={ 'uppercase' }>Templates</Heading>
+        <Stack display={ 'block' } width='220px' spacing={0}>
+            <Heading
+                py={ 4 }
+                bg='teal.900'
+                px={ 3 }
+                as='h6'
+                fontSize='xs'
+                textTransform={ 'uppercase' }>Templates</Heading>
             <List styleType='none'>
                 {
                     templates.map((template: string, counter: number) =>
