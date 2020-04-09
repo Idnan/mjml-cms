@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-import './style.css';
-import '../../assets/css/one-dark.css';
+import './file-editor.css';
+import './one-dark.css';
 
 import beautifyJS from 'js-beautify';
 import { Box, Button, ButtonGroup, Flex, Text } from '@chakra-ui/core/dist';
@@ -24,27 +24,27 @@ import 'codemirror/addon/hint/xml-hint';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/addon/lint/lint';
 
-import { codeMirrorCtrlD, codeMirrorDuplicate } from './helpers/codemirror-shortcuts';
-import { completeAfter, completeIfAfterLt, completeIfInTag } from './helpers/codemirror-autocomplete-mjml';
+import { codeMirrorCtrlD, codeMirrorDuplicate } from './lib/shortcuts';
+import { completeAfter, completeIfAfterLt, completeIfInTag } from './lib/autocomplete';
 
-let _codeMirror: EditorFromTextArea | any = null;
+let codeMirror: EditorFromTextArea | any = null;
 
 function FileEditor(props: any) {
     let _textarea: any = useRef();
 
     useEffect(() => {
-        if(!_codeMirror) {
+        if (!codeMirror) {
             initEditor();
         }
         setContent(props.content);
-    }, [props.content, _codeMirror]);
+    }, [props.content]);
 
     const handleCtrlShiftD = (cm: any) => {
-        codeMirrorDuplicate(cm, _codeMirror);
+        codeMirrorDuplicate(cm, codeMirror);
     };
 
     const handleCtrlD = (cm: any) => {
-        codeMirrorCtrlD(cm, _codeMirror);
+        codeMirrorCtrlD(cm, codeMirror);
     };
 
     const initEditor = () => {
@@ -52,13 +52,13 @@ function FileEditor(props: any) {
             return;
         }
 
-        if (_codeMirror) {
-            _codeMirror.toTextArea();
-            _codeMirror = null;
+        if (codeMirror) {
+            codeMirror.toTextArea();
+            codeMirror = null;
         }
 
         // @ts-ignore
-        _codeMirror = CodeMirror.fromTextArea(_textarea, {
+        codeMirror = CodeMirror.fromTextArea(_textarea, {
             tabSize: 2,
             dragDrop: false,
             matchTags: { bothTags: true },
@@ -98,9 +98,10 @@ function FileEditor(props: any) {
     };
 
     const setContent = (content: string) => {
-        const scrollInfo = _codeMirror.getScrollInfo();
-        _codeMirror.setValue(content);
-        _codeMirror.scrollTo(0, scrollInfo.top);
+        const scrollInfo = codeMirror.getScrollInfo();
+
+        codeMirror.setValue(content);
+        codeMirror.scrollTo(0, scrollInfo.top);
     };
 
     return (
@@ -124,10 +125,10 @@ function FileEditor(props: any) {
                         variant='outline'
                         variantColor='teal'
                         onClick={ () => {
-                            if (!_codeMirror) {
+                            if (!codeMirror) {
                                 return;
                             }
-                            _codeMirror.setValue(beautify(_codeMirror.getValue()));
+                            codeMirror.setValue(beautify(codeMirror.getValue()));
                         } }>
                         Beautify MJML
                     </Button>

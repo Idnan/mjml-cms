@@ -1,10 +1,10 @@
-import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import { appTheme } from './assets/theme';
+// import App from './components/app';
+import { appTheme } from './theme';
 import ThemeProvider from '@chakra-ui/core/dist/ThemeProvider';
 import { CSSReset } from '@chakra-ui/core/dist';
+import { App } from './app';
 
 ReactDOM.render(
     <React.StrictMode>

@@ -28,7 +28,7 @@ export const codeMirrorCtrlD = (cm: Editor, doc: any) => {
             }
         }
     } else {
-        // Search and select next occurence
+        // Search and select next occurrence
         const selectionValue: any = cm.getSelections()[0];
         const selections: any = cm.listSelections();
         const lastSelection: any = last(selections);
