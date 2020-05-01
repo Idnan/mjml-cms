@@ -136,7 +136,13 @@ function FileEditor(props: any) {
                         className={ 'editorBtn' }
                         size='xs'
                         variant='outline'
-                        variantColor='teal'>
+                        variantColor='teal'
+                        onClick={ () => {
+                            if (!codeMirror) {
+                                return;
+                            }
+                            props.mjml(codeMirror.getValue());
+                        } }>
                         Preview
                     </Button>
                 </ButtonGroup>

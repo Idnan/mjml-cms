@@ -8,3 +8,13 @@ export interface IGetTemplateResponse {
     errors: string[];
     mjml: string;
 }
+
+export interface IRenderTemplateRequest {
+    mjml: string;
+    data: any;
+}
+
+export interface IRenderTemplateResponse {
+    html: string;
+    errors: string[];
+}

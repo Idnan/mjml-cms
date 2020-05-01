@@ -1,0 +1,13 @@
+.preview > iframe {
+    width: 100%;
+    height: 100%;
+    background: white;
+    pointer-events: none;
+}
+
+.preview.scaled > iframe {
+    width: 650px;
+    height: 700px;
+    transform: scale(0.4);
+    transform-origin: top left;
+}
