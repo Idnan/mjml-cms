@@ -9,12 +9,6 @@
     color: #ffffff !important;
 }
 
-.editorBtn:hover {
-    background: transparent !important;
-    border-color: #3470df !important;
-    color: #3470df !important;
-}
-
 .FileEditor {
     flex-grow: 1;
     position: relative;
@@ -22,7 +16,7 @@
 
 .FileEditor .CodeMirror {
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;

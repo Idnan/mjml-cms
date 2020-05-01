@@ -120,6 +120,10 @@ function FileEditor(props: any) {
                     display={ 'flex' }
                     justifyContent={ 'flex-end' }>
                     <Button
+                        cursor={'pointer'}
+                        boxShadow={'none'}
+                        color={'#ffffff'}
+                        _hover={ { background: 'transparent', borderColor: '#3470df', color: '#3470df' } }
                         className={ 'editorBtn' }
                         size='xs'
                         variant='outline'
@@ -133,7 +137,10 @@ function FileEditor(props: any) {
                         Beautify MJML
                     </Button>
                     <Button
-                        className={ 'editorBtn' }
+                        cursor={'pointer'}
+                        boxShadow={'none'}
+                        color={'#ffffff'}
+                        _hover={ { background: 'transparent', borderColor: '#3470df', color: '#3470df' } }
                         size='xs'
                         variant='outline'
                         variantColor='teal'

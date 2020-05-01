@@ -7,6 +7,7 @@ import FileEditor from './components/file-editor';
 import { getTemplateService } from './services/get-template';
 import { Preview } from './components/preview';
 import { renderTemplateService } from './services/render-template';
+import { DataEditor } from './components/data-editor';
 
 export function App() {
 
@@ -37,7 +38,12 @@ export function App() {
                 <SideMenu selectedTemplateName={ setTemplate } />
             </Flex>
             <Flex flex={ 1 } flexDirection={ 'column' } bg={ '#1e1e1e' }>
-                <FileEditor content={ get(templateData, 'mjml', '') } mjml={ setMjml } />
+                <Flex flex={1} flexDirection={'column'}>
+                    <FileEditor content={ get(templateData, 'mjml', '') } mjml={ setMjml } />
+                </Flex>
+                <Flex flex={1}>
+                    <DataEditor />
+                </Flex>
             </Flex>
             <Flex flex={ 1 }>
                 <Box d={ 'flex' } flexGrow={ 1 } className='preview'>
