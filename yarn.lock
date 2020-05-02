@@ -2012,7 +2012,7 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-JSV@^4.0.x:
+JSV@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/JSV/-/JSV-4.0.2.tgz#d077f6825571f82132f9dffaed587b4029feff57"
   integrity sha1-0Hf2glVx+CEy+d/67Vh7QCn+/1c=
@@ -2178,11 +2178,6 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     "@types/color-name" "^1.1.1"
     color-convert "^2.0.1"
-
-ansi-styles@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-1.0.0.tgz#cb102df1c56f5123eab8b67cd7b98027a0279178"
-  integrity sha1-yxAt8cVvUSPquLZ817mAJ6AnkXg=
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -3042,15 +3037,6 @@ chalk@^3.0.0:
   dependencies:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
-
-chalk@~0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-0.4.0.tgz#5199a3ddcd0c1efe23bc08c1b027b06176e0c64f"
-  integrity sha1-UZmj3c0MHv4jvAjBsCewYXbgxk8=
-  dependencies:
-    ansi-styles "~1.0.0"
-    has-color "~0.1.0"
-    strip-ansi "~0.1.0"
 
 chardet@^0.7.0:
   version "0.7.0"
@@ -5254,11 +5240,6 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-has-color@~0.1.0:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/has-color/-/has-color-0.1.7.tgz#67144a5260c34fc3cca677d041daf52fe7b78b2f"
-  integrity sha1-ZxRKUmDDT8PMpnfQQdr1L+e3iy8=
-
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
@@ -6678,13 +6659,14 @@ jsonify@~0.0.0:
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
   integrity sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=
 
-jsonlint@^1.6.3:
-  version "1.6.3"
-  resolved "https://registry.yarnpkg.com/jsonlint/-/jsonlint-1.6.3.tgz#cb5e31efc0b78291d0d862fbef05900adf212988"
-  integrity sha512-jMVTMzP+7gU/IyC6hvKyWpUU8tmTkK5b3BPNuMI9U8Sit+YAWLlZwB6Y6YrdCxfg2kNz05p3XY3Bmm4m26Nv3A==
+jsonlint-mod@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/jsonlint-mod/-/jsonlint-mod-1.7.5.tgz#678d2b600b9d350ec3448373d6f71dcbf09a0e3d"
+  integrity sha512-VqTFtMj9JXv4qGSfcoYTgXgsGkTW4aXZer8u4vR64RAPjK37BUkNKmd3mTjuRTs1vQrE+yuzfzDhgB2SAyPvlA==
   dependencies:
-    JSV "^4.0.x"
-    nomnom "^1.5.x"
+    JSV "^4.0.2"
+    chalk "^2.4.2"
+    underscore "^1.9.1"
 
 jsprim@^1.2.2:
   version "1.4.1"
@@ -7394,14 +7376,6 @@ node-releases@^1.1.52, node-releases@^1.1.53:
   version "1.1.53"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.53.tgz#2d821bfa499ed7c5dffc5e2f28c88e78a08ee3f4"
   integrity sha512-wp8zyQVwef2hpZ/dJH7SfSrIPD6YoJz6BDQDpGEkcA0s3LpAQoxBIYmfIq6QAhC1DhwsyCgTaTTcONwX8qzCuQ==
-
-nomnom@^1.5.x:
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/nomnom/-/nomnom-1.8.1.tgz#2151f722472ba79e50a76fc125bb8c8f2e4dc2a7"
-  integrity sha1-IVH3Ikcrp55Qp2/BJbuMjy5Nwqc=
-  dependencies:
-    chalk "~0.4.0"
-    underscore "~1.6.0"
 
 nopt@~4.0.1:
   version "4.0.3"
@@ -10281,11 +10255,6 @@ strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   dependencies:
     ansi-regex "^4.1.0"
 
-strip-ansi@~0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-0.1.1.tgz#39e8a98d044d150660abe4a6808acf70bb7bc991"
-  integrity sha1-OeipjQRNFQZgq+SmgIrPcLt7yZE=
-
 strip-bom@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-3.0.0.tgz#2334c18e9c759f7bdd56fdef7e9ae3d588e68ed3"
@@ -10683,10 +10652,10 @@ typescript@~3.7.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.5.tgz#0692e21f65fd4108b9330238aac11dd2e177a1ae"
   integrity sha512-/P5lkRXkWHNAbcJIiHPfRoKqyd7bsyCma1hZNUGfn20qm64T6ZBlrzprymeu918H+mB/0rIg2gGK/BXkhhYgBw==
 
-underscore@~1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.6.0.tgz#8b38b10cacdef63337b8b24e4ff86d45aea529a8"
-  integrity sha1-izixDKze9jM3uLJOT/htRa6lKag=
+underscore@^1.9.1:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.10.2.tgz#73d6aa3668f3188e4adb0f1943bd12cfd7efaaaf"
+  integrity sha512-N4P+Q/BuyuEKFJ43B9gYuOj4TQUHXX+j2FqguVOpjkssLUUrnJofCcBccJSCoeturDoZU6GorDTHSvUDlSQbTg==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
