@@ -124,7 +124,6 @@ function FileEditor(props: any) {
                         boxShadow={'none'}
                         color={'#ffffff'}
                         _hover={ { background: 'transparent', borderColor: '#3470df', color: '#3470df' } }
-                        className={ 'editorBtn' }
                         size='xs'
                         variant='outline'
                         variantColor='teal'

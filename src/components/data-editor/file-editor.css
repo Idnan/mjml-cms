@@ -1,14 +1,12 @@
 @import '~codemirror/lib/codemirror.css';
 @import '~codemirror/theme/neo.css';
-@import '~codemirror/addon/hint/show-hint.css';
-@import '~codemirror/addon/lint/lint.css';
 
-.FileEditor {
+.dataEditor {
     flex-grow: 1;
     position: relative;
 }
 
-.FileEditor .CodeMirror {
+.dataEditor .CodeMirror {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,13 +15,13 @@
     height: 100%;
 }
 
-.FileEditor .CodeMirror .CodeMirror-scroll {
+.dataEditor .CodeMirror .CodeMirror-scroll {
     font-family: monospace;
     font-size: 14px;
 }
 
-.cm-s-one-dark .CodeMirror-matchingbracket,
-.cm-s-one-dark .CodeMirror-matchingtag {
+.cm-s-json-dark .CodeMirror-matchingbracket,
+.cm-s-json-dark .CodeMirror-matchingtag {
     color: #ef8a92 !important;
     border-bottom-color: rgba(52, 112, 223, 0.1) !important;
 }
@@ -59,3 +57,4 @@ li.CodeMirror-hint-active {
     background-image: none;
     padding-left: 0;
 }
+

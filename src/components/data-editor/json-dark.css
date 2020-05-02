@@ -1,0 +1,242 @@
+.cm-s-json-dark .CodeMirror-dialog {
+  background: #353543;    /* change editor background color */
+  border-bottom-color: #4c4c60;    /* change editor background color */
+  color: white;
+  animation: search-bounce 300ms;
+}
+
+@keyframes search-bounce {
+  0% {
+    transform: translate3d(0, -100px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.CodeMirror-scrollbar-filler {
+  background-color: transparent !important;
+}
+
+.CodeMirror-gutters {
+  background: #25252f !important;
+}
+
+.CodeMirror-linenumbers {
+  background: transparent !important;
+}
+
+.cm-s-json-dark .CodeMirror,
+.cm-s-json-dark .CodeMirror-scroll {
+  font-family: 'Source Code Pro';
+  background-color: #2a2a35;    /* change editor background color */
+  color: #edf2f2;
+}
+.cm-s-json-dark div.CodeMirror-selected {
+  background: #3e4451;
+}
+.cm-s-json-dark .CodeMirror-focused div.CodeMirror-selected {
+  background: rgba(204, 217, 255, 0.09);
+}
+.cm-s-json-dark .CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+.cm-s-json-dark .CodeMirror pre {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+/* Gutter & Folding */
+
+.cm-s-json-dark .CodeMirror .CodeMirror-gutters,
+.cm-s-json-dark .CodeMirror-gutter {
+  white-space: nowrap;
+  border: none;
+  background-color: #25252f;   /* change editor background color */
+}
+.cm-s-json-dark .CodeMirror-gutters {
+  background: transparent;
+  border-right: 0;
+}
+.cm-s-json-dark .CodeMirror-linenumber {
+  padding: 0 8px 0 10px;
+  min-width: 24px;
+  text-align: right;
+  white-space: nowrap;
+  color: #636d83;
+}
+/* ...folding addon: fold/...  */
+.cm-s-json-dark .CodeMirror-foldmarker {
+  font-family: 'Source Code Pro';
+  line-height: 0.3;
+  cursor: pointer;
+  color: hsl(220, 14%, 71%);
+  background: rgba(204, 217, 255, 0.05);
+}
+.cm-s-json-dark .CodeMirror-foldgutter {
+  width: 15px;
+  border: none;
+}
+.cm-s-json-dark .CodeMirror-foldgutter-open,
+.cm-s-json-dark .CodeMirror-foldgutter-folded {
+  cursor: pointer;
+}
+.cm-s-json-dark .CodeMirror-foldgutter-open:after {
+  content: '\25BE';
+  color: hsl(220, 10%, 25%);
+}
+.cm-s-json-dark .CodeMirror.over-gutter,
+.cm-s-json-dark .CodeMirror-activeline .CodeMirror-foldgutter-open:after {
+  color: hsl(220, 10%, 40%);
+}
+.cm-s-json-dark .CodeMirror-foldgutter-folded:after {
+  content: '\25B8';
+  color: hsl(220, 10%, 40%);
+}
+/* ...misc */
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: #ccc; /* The little square between H and V scrollbars */
+}
+
+/* Cursor */
+
+.cm-s-json-dark .CodeMirror-cursor {
+  border-left: 2px solid hsl(220, 100%, 66%) !important;
+}
+.cm-s-json-dark .CodeMirror-overwrite .CodeMirror-cursor {
+  border-left: none !important;
+  border-bottom: 1px solid #fff;
+}
+
+/* Popular addons */
+
+/* addon: adit/machingbrackets.js & addon: edit/matchtags.js   */
+.cm-s-json-dark .CodeMirror-matchingbracket,
+.cm-s-json-dark .CodeMirror-matchingtag {
+  /* Ensure visibility against gray inline editor background */
+  background-color: rgba(204, 217, 255, 0.09);
+  color: hsl(220, 14%, 71%) !important;
+  border-bottom: 1px solid hsl(220, 100%, 66%);
+}
+
+.cm-s-json-dark .CodeMirror-activeline-background {
+  background: rgba(153, 187, 255, 0.04);
+}
+
+.cm-s-json-dark .CodeMirror-activeline-gutter .CodeMirror-linenumber {
+  color: #edf2f2;
+}
+
+.cm-s-json-dark .cm-matchhighlight {
+  box-shadow: inset 0 0 0 1px hsl(220, 14%, 71%);
+  border-radius: 3px;
+}
+
+/* Syntax Theme /---------------------------------------------------------------------------------- */
+
+/* markdown */
+.cm-s-json-dark .cm-header {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.cm-s-json-dark .cm-negative {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-positive {
+  color: #ff5370;
+}
+
+.cm-s-json-dark .cm-strong {
+  color: #ffcb6b;
+  font-weight: bold;
+}
+.cm-s-json-dark .cm-header .cm-strong {
+  color: #ffcb6b;
+  font-weight: bold;
+}
+
+.cm-s-json-dark .cm-em {
+  color: #c678dd;
+  font-style: italic;
+}
+.cm-s-json-dark .cm-header .cm-em {
+  color: #c678dd;
+  font-style: italic;
+}
+
+/* xml, html, ... */
+.cm-s-json-dark .cm-tag {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-attribute {
+  color: #ffcb6b;
+}
+.cm-s-json-dark .cm-link {
+  color: #c3e88D;
+  border-bottom: solid 1px #c3e88D;
+}
+
+/* other ... (for example javascript) */
+.cm-s-json-dark .cm-builtin {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-keyword {
+  color: #c678dd;
+}
+.cm-s-json-dark .cm-def {
+  color: #e5c07b;
+} /* original:  #ffcb6b; */
+
+.cm-s-json-dark .cm-atom {
+  color: #ffcb6b;
+}
+.cm-s-json-dark .cm-number {
+  color: #ffcb6b;
+}
+.cm-s-json-dark .cm-property {
+  color: #61afef;
+} /* original: #ff5370 */
+.cm-s-json-dark .cm-qualifier {
+  color: #ffcb6b;
+}
+
+.cm-s-json-dark .cm-variable {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-variable-2 {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-variable-3 {
+  color: #e5c07b;
+}
+
+.cm-s-json-dark .cm-string {
+  color: #c3e88D;
+}
+.cm-s-json-dark .cm-string-2 {
+  color: #c3e88D;
+}
+
+.cm-s-json-dark .cm-punctuation {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-operator {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-meta {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-bracket {
+  color: #ff5370;
+}
+.cm-s-json-dark .cm-comment {
+  color: #5c6370;
+  font-style: italic;
+}
