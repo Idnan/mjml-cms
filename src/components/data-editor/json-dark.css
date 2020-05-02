@@ -62,7 +62,7 @@
 }
 .cm-s-json-dark .CodeMirror-linenumber {
   padding: 0 8px 0 10px;
-  min-width: 24px;
+  width: 28px;
   text-align: right;
   white-space: nowrap;
   color: #636d83;
