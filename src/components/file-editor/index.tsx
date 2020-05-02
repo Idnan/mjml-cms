@@ -1,10 +1,9 @@
+import beautifyJS from 'js-beautify';
 import React, { useEffect, useRef } from 'react';
+import { Box, Button, ButtonGroup, Flex, Text } from '@chakra-ui/core/dist';
 
 import './file-editor.css';
 import './one-dark.css';
-
-import beautifyJS from 'js-beautify';
-import { Box, Button, ButtonGroup, Flex, Text } from '@chakra-ui/core/dist';
 
 import CodeMirror, { Editor, EditorFromTextArea } from 'codemirror';
 import 'codemirror/addon/selection/active-line';
@@ -106,10 +105,11 @@ function FileEditor(props: any) {
 
     return (
         <>
-            <Flex flexDirection={ 'row' } marginX={ 3 } marginY={ 3 } alignItems={ 'center' }>
+            <Flex flexDirection={ 'row' } marginX={ 2 } marginY={ 2 } alignItems={ 'center' }>
                 <Text
                     display={ 'flex' }
                     flex={ 1 }
+                    fontSize={'xs'}
                     justifyContent={ 'flex-start' }
                     color={ '#fff' }>
                     MJML Editor
@@ -133,7 +133,7 @@ function FileEditor(props: any) {
                             }
                             codeMirror.setValue(beautify(codeMirror.getValue()));
                         } }>
-                        Beautify MJML
+                        Beautify
                     </Button>
                     <Button
                         cursor={'pointer'}

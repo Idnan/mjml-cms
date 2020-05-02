@@ -41,7 +41,7 @@ export function App() {
                 <Flex flex={1} flexDirection={'column'}>
                     <FileEditor content={ get(templateData, 'mjml', '') } mjml={ setMjml } />
                 </Flex>
-                <Flex flex={1}>
+                <Flex flex={1} flexDirection={'column'}>
                     <DataEditor />
                 </Flex>
             </Flex>
