@@ -11,7 +11,7 @@ export function Preview(props: any) {
         }
 
         setIframeContent(props?.value ?? '');
-    }, [props.value]);
+    }, [props]);
 
     const setIframeContent = (value: string) => {
         window.requestAnimationFrame(() => {

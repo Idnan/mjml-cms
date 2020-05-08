@@ -26,9 +26,12 @@ export function DataEditor(props: any) {
         if (!dataCodeMirror) {
             initDataEditor();
         }
-    }, []);
+    });
 
     const beautify = (content: string): string => {
+        if (!content) {
+            return '';
+        }
         return JSON.stringify(JSON.parse(content), null, 2);
     };
 

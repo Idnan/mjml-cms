@@ -32,15 +32,7 @@ export function App() {
         }
         renderTemplateService(mjml, data)
             .then(data => setTemplateData(data));
-    }, [mjml]);
-
-    useEffect(() => {
-        if (!mjml) {
-            return;
-        }
-        renderTemplateService(mjml, data)
-            .then(data => setTemplateData(data));
-    }, [data]);
+    }, [data, mjml]);
 
     return (
         <Flex flexDir='row' flex={ 1 } bg='#252426'>
