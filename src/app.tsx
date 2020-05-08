@@ -12,6 +12,8 @@ import { DataEditor } from './components/data-editor';
 export function App() {
 
     const [mjml, setMjml] = useState('');
+    const [data, setData] = useState({});
+
     const [template, setTemplate] = useState('');
     const [templateData, setTemplateData] = useState({});
 
@@ -28,9 +30,17 @@ export function App() {
         if (!mjml) {
             return;
         }
-        renderTemplateService(mjml, {})
+        renderTemplateService(mjml, data)
             .then(data => setTemplateData(data));
     }, [mjml]);
+
+    useEffect(() => {
+        if (!mjml) {
+            return;
+        }
+        renderTemplateService(mjml, data)
+            .then(data => setTemplateData(data));
+    }, [data]);
 
     return (
         <Flex flexDir='row' flex={ 1 } bg='#252426'>
@@ -42,7 +52,7 @@ export function App() {
                     <FileEditor content={ get(templateData, 'mjml', '') } mjml={ setMjml } />
                 </Flex>
                 <Flex flex={1} flexDirection={'column'}>
-                    <DataEditor />
+                    <DataEditor data={ setData } />
                 </Flex>
             </Flex>
             <Flex flex={ 1 }>

@@ -83,7 +83,6 @@ function FileEditor(props: any) {
                 'Cmd-D': (cm: Editor) => handleCtrlD(cm),
                 'Shift-Ctrl-D': (cm: Editor) => handleCtrlShiftD(cm),
                 'Shift-Cmd-D': (cm: Editor) => handleCtrlShiftD(cm)
-                /* eslint-enable quotes */
             }
         });
     };

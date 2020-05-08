@@ -60,6 +60,7 @@ export function DataEditor(props: any) {
 
         dataCodeMirror.on('change', (cm: Editor) => {
             cm.setOption('lint', dataCodeMirror.getValue().trim());
+            props.data(JSON.parse(dataCodeMirror.getValue()));
         });
 
         dataCodeMirror.setOption('lint', dataCodeMirror.getValue().trim());
