@@ -14,14 +14,12 @@ export function Preview(props: any) {
     }, [props]);
 
     const setIframeContent = (value: string) => {
-        window.requestAnimationFrame(() => {
-            if (!iframe) {
-                return;
-            }
-            const doc = iframe.contentDocument;
-            const { documentElement } = doc;
-            documentElement.innerHTML = value;
-        });
+        if (!iframe) {
+            return;
+        }
+        const doc = iframe.contentDocument;
+        const { documentElement } = doc;
+        documentElement.innerHTML = value;
     };
 
     return (
