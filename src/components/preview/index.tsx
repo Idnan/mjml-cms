@@ -1,5 +1,6 @@
+import { BsImage } from 'react-icons/bs';
+import { Box, Flex } from '@chakra-ui/core/dist';
 import React, { useEffect, useRef } from 'react';
-import { Flex, Text } from '@chakra-ui/core/dist';
 
 export function Preview(props: any) {
 
@@ -32,8 +33,8 @@ export function Preview(props: any) {
                     ref={ r => (iframe = r) }
                 />
             ) : (
-                <Flex flex={ 1 } flexDirection={ 'row' } justifyContent={ 'center' } alignItems={ 'center' }>
-                    <Text>No Content</Text>
+                <Flex flex={ 1 } flexDirection={ 'column' } justifyContent={ 'center' } alignItems={ 'center' }>
+                    <Box as={ BsImage } size='100px' color='#42474e' />
                 </Flex>
             ) }
         </>
