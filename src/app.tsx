@@ -23,7 +23,10 @@ export function App() {
         }
 
         getTemplateService(template)
-            .then(data => setTemplateData(data));
+            .then(data => {
+                setMjml(data?.mjml || '');
+                setTemplateData(data)
+            });
     }, [template]);
 
     useEffect(() => {
