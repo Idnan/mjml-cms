@@ -63,10 +63,22 @@ export function DataEditor(props: any) {
 
         dataCodeMirror.on('change', (cm: Editor) => {
             cm.setOption('lint', dataCodeMirror.getValue().trim());
-            props.data(JSON.parse(dataCodeMirror.getValue()));
+
+            if (isJSON(dataCodeMirror.getValue())) {
+                props.data(JSON.parse(dataCodeMirror.getValue()));
+            }
         });
 
         dataCodeMirror.setOption('lint', dataCodeMirror.getValue().trim());
+    };
+
+    const isJSON = (value: string): boolean => {
+        try {
+            JSON.parse(value);
+        } catch (e) {
+            return false;
+        }
+        return true;
     };
 
     return (
