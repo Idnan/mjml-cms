@@ -1,9 +1,10 @@
 import axios from 'axios';
+import { trim } from 'lodash';
 import { IGetTemplateRequest, IGetTemplateResponse } from '../types/service';
 
 export async function getTemplateService(template: string, templateData: any = {}): Promise<IGetTemplateResponse> {
     const { data } = await axios.post(
-        'http://localhost:9000/get-template',
+        `${trim(process.env.REACT_APP_API_URL, '/')}/get-template`,
         {
             template,
             data: templateData

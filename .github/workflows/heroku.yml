@@ -1,0 +1,39 @@
+name: Deploy to Heroku
+on:
+  push:
+    branches:
+      - master
+
+env:
+  GH_PAT: ${{ secrets.GH_PAT }}
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: General
+      run: |
+        # comment
+        echo ::set-env name=REPOSITORY_NAME::$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}')
+
+    - name: Login to Heroku registery
+      run: heroku container:login
+
+    - name: Build the Docker image
+      run: |
+        docker build \
+          --build-arg GH_PAT=${GH_PAT} \
+          --network=host \
+          --file Dockerfile -t $REPOSITORY_NAME .
+      timeout-minutes: 15
+
+    - name: Push to heroku registery
+      run: |
+        docker tag $REPOSITORY_NAME registry.heroku.com/$REPOSITORY_NAME/web
+        docker push registry.heroku.com/$REPOSITORY_NAME/web
+        heroku container:push web --app=$REPOSITORY_NAME
+        heroku container:release web --app=$REPOSITORY_NAME
