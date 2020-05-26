@@ -10,6 +10,7 @@ The official MJML editor doesn't support the dynamic variables or templating. Th
 Editor has three panels, one for template, other for data to populate and the preview
 ![](https://i.imgur.com/nJvYapC.png)
 Put the template code and the data and click preview get a view of the email.
+
 ![](https://i.imgur.com/LixxQ2c.png)
 
 ## Requirements
